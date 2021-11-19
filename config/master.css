@@ -1,0 +1,295 @@
+* {
+  box-sizing:border-box;
+}
+body {
+  background-color: #004e6e !important;
+}
+
+
+/**
+* main-container styling
+**/
+.main-container{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+}
+#h2_styling {
+  background-color: #004e6e;
+  color: #fff;
+  height: 80px;
+  padding: 25px;
+}
+
+/**
+* styling the selected options on change listener**/
+.form-container{
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+}
+#gates {
+  width: 100%;
+  margin-top: 12px;
+}
+#show_single, #show_double{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  margin-top: 8px;
+}
+#show_single label{
+  padding-left: 6px;
+}
+/* #show_double {
+  display: flex;
+  flex-direction: row;
+} */
+#f_single{margin-left: 10px; width: 150px}
+#f_double{margin-left: 10px; width: 150px}
+
+#show_type, #show_height,
+#show_color, #show_single,
+#show_double, #show_footage,
+#estimate{
+  margin-top: 12px;
+}
+
+#txtOne p, #textTwo p{
+  float:left;
+  width: 100%;
+  padding: 2em;
+}
+#estimateBtn #estimate {
+  width: 100%;
+  background-color: #004e6e;
+  border: 2px Solid orange;
+  border-radius: 8px;
+  color: #fff;
+  margin-top: 10px;
+
+}
+/** styling for report and text
+* when the user click the estimate btn
+*/
+.outputReport {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  /* align-items: center; */
+}
+.estistyling{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin: auto;
+  width: 32%;
+}
+
+.estistyling #startover {
+  order:1;
+}
+.estistyling #output {
+  order:2;
+}
+.estistyling #contactus{
+  order:3;
+}
+.outputReport .estistyling {
+  order:1;
+}
+.outputReport #textTwo {
+  order:2;
+}
+.outputReport #outputContact {
+  order:3;
+  color: #004e6e;
+  margin: 2em;
+}
+
+#startbtn, #contactBtn{
+  width: 100%;
+  background-color: #004e6e;
+  border: 2px Solid #007bff;
+  color: #fff;
+}
+.list-group{
+  font-size: 15px;
+}
+
+#list-type{padding-left: 34px;}
+#list-color{padding-left: 32px;}
+#list-single{padding-left: 28px;}
+#list-double{padding-left: 21px;}
+#list-footage{padding-left: 16px;}
+
+/** hide content **/
+.hidden, .hiddenReport {
+  display: none;
+}
+.contact-container{
+  display: none;
+}
+
+/*** styling
+* for the contact form
+**/
+
+#emailbtn {
+  height: 3em;
+  background-color: #004e6e;
+  color: #fff;
+  border: 2px Solid #007bff;
+  margin-top: 1em;
+}
+
+/** responsive page **/
+
+ /* when the screen is less
+than 800px wide
+For tablet **/
+@media screen and (max-width: 900px) {
+  .estistyling{
+    width: 35%;
+    /* padding: 1em; */
+  }
+}
+@media screen and (max-width: 800px) {
+ .estistyling{
+   width: 40%;
+   /* padding: 1em; */
+ }
+}
+/**when the screen is less than 800px wide
+For tablet **/
+@media screen and (max-width: 700px) {
+  .estistyling{
+    width: 45%;
+    /* padding: 1em; */
+  }
+}
+ @media screen and (max-width: 600px) {
+   .estistyling{
+     width: 60%;
+     /* padding: 1em; */
+   }
+ }
+/**when the screen is less than 800px wide
+ For tablet **/
+@media screen and (max-width: 500px) {
+  .estistyling{
+    width: 80%;
+    padding: 1em;
+  }
+}
+
+/* For mobile phones:
+when the screen is less than 600px wide
+For mobile phones**/
+@media screen and (max-width: 400px) {
+  .estistyling{
+    width: 100%;
+    padding: 1em;
+  }
+}
+
+/**
+* styling for the validation
+**/
+.validation_styling {
+  border: 2px solid orange !important;
+}
+.msg_error {
+  color: orange;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: -15px;
+}
+/**
+* captcha styling
+*/
+.captchaContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+}
+#ans {
+  border: 2px solid #007bff;
+  width: 50px;
+  height: 28px;
+  margin-left: 5px;
+  margin-top: 3px;
+  text-align: center;
+}
+.showNum {
+  color: #fff;
+  order: 1;
+  margin-top: 5px
+}
+.inputresult {
+  order: 2;
+
+}
+.captchamessage{
+  color: #fff;
+  margin-left: 15px;
+  margin-top: 5px;
+  order: 3;
+  font-family: "Times New Roman, Times, serif";
+}
+/**
+*styling for Modal
+*
+*/
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 990;
+}
+
+.modal .modal_content {
+  z-index: 999;
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  background: #004e6e;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.7);
+  border-radius: 20px;
+  border: 5px solid #007bff;
+  width: 520px; /* This just a default width */
+  height: 60%;
+  text-align: center;
+}
+
+.modal .modal_content > h2 {
+  font-size: 20px;
+  font-weight: 100;
+  margin: 30% 0 25%;
+  text-align: center;
+  color: orange;
+  width: 100%;
+}
+.modal .close_modal {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  opacity: 0.5;
+  color: #fff;
+  background: none;
+  border: none;
+  /* transition: opacity 0.2s ease; */
+}
+.modal .close_modal:hover {
+  opacity: 10;
+}

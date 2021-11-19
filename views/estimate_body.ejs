@@ -1,0 +1,177 @@
+<div class="main-container" >
+  <div id="h2_styling">
+    <h2 style="text-align:center;"><%=h2%></h2>
+  </div>
+  <!-- form container -->
+   <div class="form-container">
+     <!---- form where the user will enter or selected data-->
+      <form id="fence-items" name = "myForm" action="/estimate_summary" method="post">
+        <!-- type --->
+         <div id="show_type">
+           <label for="">Fence type : </label>
+          <select class="form-select form-select-sm" name="type" id="type" aria-label="Default select example">
+            <option value="">Fence type</option>
+            <% type.forEach(types => { %>
+             <option value="<%=types.fence_Type%>"><%=types.fence_Type%></option>
+              <% }) %>
+            </select>
+          </div>
+            <!-- Height --->
+             <div class="hidden" id="show_height">
+              <label for="">Fence height : </label>
+              <select class="form-select form-select-sm" name="height" id="height" aria-label="Default select example">
+                  <option value=""></option>
+                  <!--- option elements will be dynamically display -->
+                </select>
+              </div>
+            <!-- footage -->
+            <div class="hidden" id="show_footage">
+              <label for="f_footage">Enter Footage</label>
+              <input type="text" id="f_footage"  class="form-control form-control-sm" name="footage" placeholder="Enter Footage">
+            </div>
+            <!-- color --->
+             <div class="hidden" id="show_color">
+               <label for="">Fence color : </label>
+              <select class="form-select form-select-sm" name="color" id="color" aria-label="Default select example">
+                <option value=""></option>
+              <!--- option elements will be dynamically display -->
+              </select>
+              </div>
+              <!--- how many gate do you need -->
+              <div class=" hidden" id="gates">
+                <label for="">How many gate do you need:</label>
+                <!-- Single -->
+                <div  id="show_single">
+                  <label for="f_single">Single : </label>
+                  <input type="text" id="f_single" class="form-control form-control-sm" name="single">
+                </div>
+                <div class="singleFailure">
+                    <!-- <span>hello </span> -->
+                </div>
+
+              <!-- Double -->
+              <div  id="show_double">
+                <label for="f_double">Double : </label>
+                <input type="text" name="double" id="f_double" class="form-control form-control-sm">
+              </div>
+              <div class="doubleFailure">
+
+              </div>
+            </div>
+            <!-- estimate button -->
+            <div class="hidden" id="estimateBtn">
+              <button type="submit" class="btn" id="estimate">Get Ballpark Estimate</button>
+            </div>
+            </form>
+          <!-- end of the form container -->
+         </div>
+         <!-- text start here-->
+         <div class="hidden" id="txtOne">
+           <!--- display the text also -->
+           <p> **Optional services such as take down and haul away of existing
+             fence and/or dirt removal are available at and additional cost.
+           The BallPark Figure Calculator is based on our most commonly
+           installed fences and does not include all of the color and style
+           options or upgrades that we offer. Feel free to contact us with
+           any questions by calling 708-479-0414 and press 3 for Customer Service.</p>
+         </div>
+
+         <!---- display summary -->
+          <div class="hiddenReport">
+            <div class="outputReport">
+              <div class="estistyling">
+                <!-- reload button -->
+                  <div id="startover">
+                    <button type="button" class="btn" id="startbtn" >Start Over</button>
+                  </div>
+                  <!-- display summary -->
+                  <div id="output">
+                    <!-- estimate summary goes here-->
+                  </div>
+                  <!-- contact us button -->
+                  <div id="contactus">
+                    <label>We would love to talk to you about your ballpark estimate. Use the contact us button below, and we will have a team member reach out to you.
+                    </label>
+                    <br>
+                    <button type="button" class="btn" id="contactBtn">Contact Us</button>
+                  </div>
+                 </div>
+                 <!-- the second text will display here-->
+                 <div id="textTwo">
+                  <!--- display the text here-->
+                 </div>
+                <!-- the form goes here -->
+               <div class="contact-container" id= "outputContact">
+                <!-- contact us form start here --->
+                <form id="contact-form" name="contactForm">
+                <!-- 2 column grid layout with text inputs for the first and email -->
+                <div class="row mb-4">
+                  <div class="col">
+                    <div class="form-floating">
+                      <input type="text" id="name" name="name" class="form-control" placeholder="Name" required/>
+                      <label for="name">Name</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-floating">
+                      <input type="email" id="email" name="email" class="form-control" placeholder="Email" required/>
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- phone input -->
+                <div class="form-floating mb-4">
+                  <input type="tel" id="phone" name="Phone" class="form-control" placeholder="Phone" required/>
+                  <label for="phone">Phone Number</label>
+                </div>
+                <!-- address input -->
+                <div class="form-floating mb-4">
+                  <input type="text" id="address" name="address" class="form-control" placeholder="Address" required/>
+                  <label for="address">Address</label>
+                </div>
+                <!-- city input -->
+                <div class="form-floating mb-4">
+                  <input type="text" id="city" name="city" class="form-control" placeholder="City" required/>
+                  <label for="city">City</label>
+                </div>
+                <!-- zipcode input -->
+                <div class="form-floating mb-4">
+                  <input type="text" id="zipcode" name="zipcode" class="form-control" placeholder="Zip Code" required/>
+                  <label for="zipcode">Zip Code</label>
+                </div>
+                <!-- Message input -->
+                <div class="form-floating">
+                  <textarea class="form-control" id="message" name="message" style="height: 120px" placeholder="Message"></textarea>
+                  <label for="message">Messages or Comments</label>
+                </div>
+                <!-- captcha -->
+                <div class="captchaContainer">
+                  <div class="showNum">
+                    <!---- display the 2 numbers to add-->
+                  </div>
+                  <div class="inputresult">
+                    <!-- where the result goes -->
+                    <input type="text" name="" id="ans">
+                  </div>
+                  <div class="captchamessage">
+                    <!--- the message on whether or not the addition is correct -->
+                  </div>
+                </div>
+                <!-- Submit button -->
+                <button type="submit" id="emailbtn" class="btn form-control">Submit</button>
+              <!-- end of the form -->
+              </form>
+          <!-- end of the outputContact-->
+          </div>
+        <!-- outputReport -->
+        </div>
+      </div>
+    </div>
+
+<!--- modal -->
+<div class="modal" style="display: none">
+    <div class="modal_content">
+        <h2>Thank you for submitting the Form!. We will reach out to you shortly</h2>
+      <button title="Close" class="close_modal">x</button>
+  </div>
+</div>
