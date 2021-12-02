@@ -169,10 +169,10 @@ class TaskManager {
       }
     });
     // // declaring an array of recipients . kbros recipient Inqu1ry@kbrothersfence.com
-    // let recipients = ['justin@mcservices.com', 'tim@mcservices.com', 'fabrice@mcservices.com']
+    // let recipients = ['-----']
     let mailOptions = {
       from: `${data.email}`,
-      to: 'fabrice@mcservices.com',
+      to: 'fabrice@hungry4more.learn',
       // bcc: recipients,
       subject: `Ballpark Estimate requested from ${data.name}`,
       text: `${contact_info} \n${str} \nMessage or Comment : \n${data.message}`
