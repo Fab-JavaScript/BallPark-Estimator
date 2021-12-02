@@ -168,7 +168,7 @@ class TaskManager {
         pass: process.env.AUTH_PWD
       }
     });
-    // // declaring an array of recipients . kbros recipient Inqu1ry@kbrothersfence.com
+    // // declaring an array of recipients
     // let recipients = ['-----']
     let mailOptions = {
       from: `${data.email}`,
