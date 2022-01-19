@@ -294,12 +294,11 @@ const displayEstimate = data => {
   s_footage.id = 'list-footage';
   let s_total = document.createElement('h3');
   s_total.className = 'list-group-item active';
-  f_para2.textContent = `**Optional services such as take down and haul away of existing
-      fence and/or dirt removal are available at and additional cost.
-    The BallPark Figure Calculator is based on our most commonly
-    installed fences and does not include all of the color and style
-    options or upgrades that we offer. Feel free to contact us with
-    any questions by calling 708-479-0414 and press 3 for Customer Service.`;
+  f_para2.textContent = `**Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged.`;
 
   // Assign Content to the elements
   header2.textContent = 'Materials Selected';
@@ -350,8 +349,8 @@ const displayContactForm = () => {
   let btn_contact = document.querySelector('#contactBtn');
   let form = document.querySelector('.contact-container');
   btn_contact.addEventListener('click', () => {
-    form.classList.remove('contact-container');
-    document.querySelector('#outputContact').scrollIntoView({behavior: 'smooth'});
+    form.classList.remove('contact-container');// removed the materials selected
+    document.querySelector('#outputContact').scrollIntoView({behavior: 'smooth'}); // bring the contact form up
     displayCaptcha(num);
   })
 }

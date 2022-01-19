@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const mysql = require('./mysql_config');
-const commaNumber = require('comma-number');
-const nodemailer = require('nodemailer');
-const format = commaNumber.bindWith(',', '.');
+// const mysql = require('./mysql_config');
+// const commaNumber = require('comma-number');
+// const nodemailer = require('nodemailer');
+// const format = commaNumber.bindWith(',', '.');
 const dotenv = require('dotenv').config({path : './smtp_config.env'});
 const TaskManager = require('./TaskManager');
 const manager = new TaskManager();
@@ -25,7 +25,7 @@ app.get('/', (req,res) => {
   manager.getAllType(data => {
     let f_type = data
     console.log(f_type);
-    res.render('estimate.ejs', {type:f_type, title: 'BallPark', h2:'Ballpark Figure Calculator'});
+    res.render('estimate.ejs', {type:f_type, title: 'Bonorum et Malorum', h2:'Lorem Ipsum Calculator'});
     });
   })
 
