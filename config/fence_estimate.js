@@ -310,7 +310,7 @@ const displayEstimate = data => {
   s_single.innerHTML = `Single : <b>${data.single}</b>`;
   s_double.innerHTML = `Double : <b>${data.double}</b>`;
   s_footage.innerHTML = `Footage : <b>${data.footage}'</b>`;
-  s_total.textContent = `BallPark Estimate: $${data.total}`;
+  s_total.textContent = `Estimate: $${data.total}`;
   s_total.style.fontSize = "20px";
   s_total.style.backgroundColor = '#004e6e';
 
